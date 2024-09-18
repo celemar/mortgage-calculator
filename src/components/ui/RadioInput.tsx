@@ -28,13 +28,16 @@ export default function RadioInput({ name, options }: RadioInputProps) {
           className="flex items-center gap-4 pl-4 py-[0.6rem] md:py-[0.65rem] border border-slate-700 rounded hover:border-lime custom-focus custom-bg"
         >
           <input
-            id={name}
+            id={`${name}-${option.value}`}
             className="cursor-pointer"
             type="radio"
             value={option.value}
             {...register(name)}
           />
-          <label htmlFor={name} className="font-bold text-lg text-slate-900">
+          <label
+            htmlFor={`${name}-${option.value}`}
+            className="font-bold text-lg text-slate-900"
+          >
             {option.label}
           </label>
         </div>
