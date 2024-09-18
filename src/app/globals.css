@@ -61,3 +61,9 @@ input[type="radio"]:checked::before {
   background-color: var(--lime); 
   border-radius: 50%;
 }
+
+.underline-custom {
+  text-decoration: underline;
+  text-decoration-thickness: 1px; 
+  text-underline-offset: 3px; 
+}

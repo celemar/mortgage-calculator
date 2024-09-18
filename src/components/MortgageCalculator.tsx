@@ -55,13 +55,13 @@ export default function MortgageCalculator() {
   return (
     <section className="bg-[white] grid md:grid-cols-2 gap-6 md:gap-0 md:rounded-2xl md:shadow-lg max-w-[1000px]">
       <div className="grid gap-6 md:gap-9 md:pb-8">
-        <header className="flex flex-col gap-2 md:flex-row md:justify-between px-6 pt-7 md:pt-10 md:px-9">
+        <header className="flex flex-col gap-2 md:flex-row md:justify-between  md:items-center px-6 pt-7 md:pt-10 md:px-9">
           <h1 className="font-bold text-2xl text-slate-900">
             Mortgage Calculator
           </h1>
           <button
             onClick={() => methods.reset()}
-            className="underline w-fit text-slate-700 hover:text-slate-900 focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime"
+            className="w-fit text-slate-700 hover:text-slate-900 focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime underline-custom"
           >
             Clear All
           </button>
