@@ -40,8 +40,6 @@ export default function NumberInput({
     ${error ? "bg-red text-white" : "bg-slate-100 text-slate-700"}`;
 
   const formatNumber = (value: string) => {
-
-    // Only add commas if formatWithCommas is true
     return formatWithCommas
       ? value.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
       : value;
@@ -49,10 +47,8 @@ export default function NumberInput({
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value;
-
     // Allow numbers and one decimal point
     value = value.replace(/[^\d.]/g, "");
-
     // Ensure only one decimal point
     const parts = value.split(".");
     if (parts.length > 2) {
