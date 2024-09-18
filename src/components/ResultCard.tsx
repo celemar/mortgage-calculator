@@ -44,7 +44,7 @@ export default function ResultCard({
         <div className="flex flex-col items-center gap-1 p-8">
           <SvgCalculator />
           <div className="flex flex-col items-center gap-4">
-            <h3 className="text-2xl pt-3">Results shown here</h3>
+            <h2 className="text-2xl pt-3">Results shown here</h2>
             <p className="text-slate-300 text-center">
               Complete the form and click &ldquo;calculate repayments&rdquo; to see what your
               monthly repayments would be.
