@@ -17,7 +17,7 @@ export default function ResultCard({
     <div className="bg-[#133040] text-white h-full grid items-center md:rounded-bl-[5rem] md:rounded-tr-2xl md:rounded-br-2xl">
       {isSubmitSuccessful ? (
         <div className="mb-auto flex flex-col gap-4 p-6 md:py-8 md:px-10">
-          <h3 className="text-2xl pt-2">Your results</h3>
+          <h3 className="text-2xl pt-2 font-bold">Your results</h3>
           <p className="text-slate-300 pb-2 md:pb-5">
             Your results are shown below based on the information you provided.
             To adjust the results, edit the form and click &ldquo;calculate repayments&rdquo;
@@ -44,7 +44,7 @@ export default function ResultCard({
         <div className="flex flex-col items-center gap-1 p-8">
           <SvgCalculator />
           <div className="flex flex-col items-center gap-4">
-            <h2 className="text-2xl pt-3">Results shown here</h2>
+            <h2 className="text-2xl pt-3 font-bold">Results shown here</h2>
             <p className="text-slate-300 text-center">
               Complete the form and click &ldquo;calculate repayments&rdquo; to see what your
               monthly repayments would be.
