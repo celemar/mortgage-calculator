@@ -3,31 +3,61 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  /* Colors */
+  --lime: hsl(61, 70%, 52%);
+  --red: hsl(4, 69%, 50%);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* Neutral Colors */
+  --slate-100: hsl(202, 86%, 94%);
+  --slate-300: hsl(203, 41%, 72%);
+  --slate-500: hsl(200, 26%, 54%);
+  --slate-700: hsl(200, 24%, 40%);
+  --slate-900: hsl(202, 55%, 16%);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.custom-focus:focus-within span {
+  background-color: var(--lime);
+  color: var(--slate-900);
+}
+
+.custom-focus:focus-within {
+  outline: 1px solid var(--lime);
+}
+
+.custom-bg:has(input:checked) {
+  background: #fafae0;
+  border: solid 1px var(--lime);
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  border: 2px solid var(--slate-700);
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="radio"]:checked {
+  border-color: var(--lime);
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  background-color: var(--lime); 
+  border-radius: 50%;
 }
